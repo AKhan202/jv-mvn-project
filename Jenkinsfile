@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from Git repository
-                git 'https://github.com/AKhan202/java-maven-project.git'
+                git 'https://github.com/AKhan202/jv-mvn-project.git'
             }
         }
 
@@ -31,7 +31,7 @@ pipeline {
                 script {
                     // Build Docker image
                     echo 'Starting to build Docker image...'
-                    docker.build("${java-maven}:${latest}")
+                    docker.build("${jv-mvn}:${latest}")
                     echo 'Docker image built successfully.'
                 }
             }
